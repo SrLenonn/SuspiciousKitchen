@@ -10,13 +10,11 @@ O que se move, muda de estado ou reage a algo? Uma por linha.
 
 - Jogador
 - Cliente
-- Humano herda de Cliente
-- Monstro herda de Cliente
 - Pedidos
 - Receitas
 - Ingredientes
 - Comidas
-- Ferramentas de cozinha
+- Estações
 
 ## 2. Propriedades
 
