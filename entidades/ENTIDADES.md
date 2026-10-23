@@ -24,15 +24,13 @@ O que cada entidade sabe sobre si?
 
 | Entidade | Propriedades |
 |---|---|
-| Jogador | Estresse |
-| cliente | Nome, Perfil, Restrições, Preferências, Nível, Estado |
-| Monstro | Espécie, Características |
-| Humano | Características |
-| Pedidos | Nome, Itens Solicitados, Status, Nível, Resultado |
-| Receitas | Nome, Modo, Nível |
-| Ingrediente | Nome, Categoria, Características |
-| Comidas | Nome, Etapa, Ingredientes, Qualidade|
-| Ferramentas | Nome, Função, Disponibilidade|
+| Jogador | Estresse, Inventário |
+| cliente | Nome, Perfil, Restrições, Espécie, Características, Preferências, Nível, Estado |
+| Pedidos | Nome, Itens Solicitados, Status, Nível |
+| Receitas | Nome, Modo, Nível,Igredientes |
+| Ingrediente | Nome, Categoria, Características, Qualidade |
+| Comidas | Nome, Etapa, Receita, Qualidade |
+| Estações | Nome, Função, Disponibilidade |
 
 ## 3. Comportamentos
 
@@ -40,15 +38,13 @@ O que cada entidade faz a cada quadro?
 
 | Entidade | Comportamentos |
 |---|---|
-| Jogador | Interagir com Clientes, Anota Pedidos, Entrega Comida, Atualiza Estresse |
-| Cliente | Faz Pedido, Avalia Atendimento, Realizar feedback, Encerrar atendimento |
-| Monstro | '' |
-| Humano | '' |
-| Pedidos | Registra Itens, Atualiza Status, Verifica Conclusão, Valida Comida |
-| Receitas | Consulta Ingredientes, Consulta Etapa, Valida o Preparo, Valida a Comida |
+| Jogador | Interagir com Clientes, Anota Pedidos, Entrega Comida, Atualiza Estresse, Inventário |
+| Cliente | Fazer Pedido, Avalia Atendimento, Encerrar atendimento |
+| Pedidos | Atualiza Status, Verifica Conclusão |
+| Receitas | Consulta Ingredientes, Consulta Etapa, Valida o Preparo |
 | Ingredientes | Nada |
-| Comidas | Adiciona Ingredientes, Registra Etapa, Valida Finalização |
-| Ferramentas | Seleção, Ação, Verifica Compatibilidade, Atualiza Estado do Ingrediente | 
+| Comidas | Adiciona Ingredientes, Registra Etapa, Valida Qualidade |
+| Estações | Seleção, Ação, Verifica Compatibilidade, Atualiza Qualidade do Ingrediente | 
 
 
 ## 4. Colisões
@@ -57,7 +53,7 @@ O que colide com o quê? A reação é igual para todo par?
 
 | Quem | Com quem | O que acontece |
 |---|---|---|
-|Não Há colisões |
+| Igredientes | Estações | Trata o igrediente |
 
 ## 5. Comunicação
 
@@ -85,4 +81,4 @@ Algo parece entidade, mas não se atualiza sozinho (placar, cenário, som, câme
 
 Duas ou mais entidades repetem o mesmo comportamento? Qual, e em quais?
 
-- As Entidades "Monstro" e "Humano" possuem similaridade de comportamento, ambos fazem pedido, verificam o pedido, e fornecem feedback ao jogador, ambas possuem ações herdadas de cliente
+- Nada repete
